@@ -6,6 +6,9 @@
   path: /networks/name=default/subnets/0/reserved?
   value: [((internal_gw))/29]
 
+- type: replace
+  path: /networks/name=default/subnets/0/dns?
+  value: [((internal_dns))]
 
 - type: replace
   path: /networks/-
@@ -16,7 +19,7 @@
     - range: 10.10.0.0/24
       gateway: 10.10.0.1
       azs: [z1, z2, z3]
-      dns: [8.8.8.8]
+      dns: [10.10.0.2]
       reserved: [10.10.0.1/29, 10.10.0.64]
       static: [10.10.0.240-10.10.0.254]
       cloud_properties:
@@ -31,7 +34,7 @@
     - range: 10.10.2.0/24
       gateway: 10.10.2.1
       azs: [z1, z2, z3]
-      dns: [8.8.8.8]
+      dns: [10.10.2.2]
       reserved: [10.10.2.1/30]
       static: [10.10.2.240-10.10.2.254]
       cloud_properties:

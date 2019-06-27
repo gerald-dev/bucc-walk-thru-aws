@@ -17,6 +17,7 @@ subnet_id:         $($tfoutput aws.network.private.subnet)
 az:                $($tfoutput aws.network.private.az)
 internal_cidr:     $($tfoutput aws.network.prefix).1.0/24
 internal_gw:       $($tfoutput aws.network.prefix).1.1
+internal_dns:      $($tfoutput aws.network.prefix).1.2
 internal_ip:       $($tfoutput aws.network.prefix).1.4
 
 director_name: bucc-walk-thru

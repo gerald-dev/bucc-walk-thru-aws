@@ -9,6 +9,7 @@ az:            $($tfoutput aws.network.private.az)
 subnet_id:     $($tfoutput aws.network.private.subnet)
 internal_cidr: $($tfoutput aws.network.prefix).1.0/24
 internal_gw:   $($tfoutput aws.network.prefix).1.1
+internal_dns:  $($tfoutput aws.network.prefix).1.2
 
 dmz_subnet_id:           $($tfoutput aws.network.dmz.subnet)
 cf_services_subnet_id:   $($tfoutput aws.network.cf-services.subnet)
