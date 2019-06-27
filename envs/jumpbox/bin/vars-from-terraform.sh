@@ -16,6 +16,7 @@ subnet_id:         $($tfoutput aws.network.dmz.subnet)
 az:                $($tfoutput aws.network.dmz.az)
 internal_cidr:     $($tfoutput aws.network.prefix).0.0/24
 internal_gw:       $($tfoutput aws.network.prefix).0.1
+internal_dns:      $($tfoutput aws.network.prefix).0.2
 internal_ip:       $($tfoutput aws.network.prefix).0.4
 
 external_ip:       $($tfoutput box.jumpbox.public_ip)
